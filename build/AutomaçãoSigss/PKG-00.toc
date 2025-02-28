@@ -46,6 +46,10 @@
    'C:\\Users\\Vinicius '
    'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
    'PYSOURCE'),
+  ('pyi_rth__tkinter',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth__tkinter.py',
+   'PYSOURCE'),
   ('main',
    'C:\\Users\\Vinicius Gabriel\\Desktop\\Estudos\\automacao sigss\\main.py',
    'PYSOURCE')],

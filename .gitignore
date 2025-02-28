@@ -30,3 +30,7 @@ desktop.ini
 # Dependências instaladas
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Pastas de build e distribuição
+build/
+dist/
