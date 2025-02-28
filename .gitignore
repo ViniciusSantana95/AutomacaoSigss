@@ -1,0 +1,32 @@
+# Arquivos do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+venv/
+env/
+*.env
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Configurações do usuário
+*.ini
+*.cfg
+
+# Chromedriver
+chromedriver
+chromedriver.exe
+
+# Arquivos do sistema operacional
+Thumbs.db
+desktop.ini
+
+# Dependências instaladas
+pip-log.txt
+pip-delete-this-directory.txt

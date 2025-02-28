@@ -1,0 +1,140 @@
+([('AutomaçãoSigss.exe',
+   'C:\\Users\\Vinicius Gabriel\\Desktop\\Estudos\\automacao '
+   'sigss\\build\\AutomaçãoSigss\\AutomaçãoSigss.exe',
+   'EXECUTABLE'),
+  ('chromedriver-win64\\chromedriver.exe',
+   'C:\\Users\\Vinicius Gabriel\\Desktop\\Estudos\\automacao '
+   'sigss\\chromedriver-win64\\chromedriver.exe',
+   'BINARY'),
+  ('selenium\\webdriver\\common\\windows\\selenium-manager.exe',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\windows\\selenium-manager.exe',
+   'BINARY'),
+  ('python310.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\python310.dll',
+   'BINARY'),
+  ('_lzma.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_uuid.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_uuid.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('VCRUNTIME140.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('chromedriver-win64\\LICENSE.chromedriver',
+   'C:\\Users\\Vinicius Gabriel\\Desktop\\Estudos\\automacao '
+   'sigss\\chromedriver-win64\\LICENSE.chromedriver',
+   'DATA'),
+  ('chromedriver-win64\\THIRD_PARTY_NOTICES.chromedriver',
+   'C:\\Users\\Vinicius Gabriel\\Desktop\\Estudos\\automacao '
+   'sigss\\chromedriver-win64\\THIRD_PARTY_NOTICES.chromedriver',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\Vinicius Gabriel\\Desktop\\Estudos\\automacao '
+   'sigss\\build\\AutomaçãoSigss\\base_library.zip',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\certifi\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v132\\py.typed',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v132\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\mutation-listener.js',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\mutation-listener.js',
+   'DATA'),
+  ('selenium\\webdriver\\firefox\\webdriver_prefs.json',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\firefox\\webdriver_prefs.json',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\findElements.js',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\remote\\findElements.js',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v131\\py.typed',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v131\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\getAttribute.js',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\remote\\getAttribute.js',
+   'DATA'),
+  ('selenium\\py.typed',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\macos\\selenium-manager',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\macos\\selenium-manager',
+   'DATA'),
+  ('selenium\\webdriver\\common\\linux\\selenium-manager',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\linux\\selenium-manager',
+   'DATA'),
+  ('selenium\\webdriver\\remote\\isDisplayed.js',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\remote\\isDisplayed.js',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v130\\py.typed',
+   'C:\\Users\\Vinicius '
+   'Gabriel\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\selenium\\webdriver\\common\\devtools\\v130\\py.typed',
+   'DATA')],)
