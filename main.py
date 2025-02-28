@@ -1,48 +1,53 @@
 import time
+import sys
+import os
+import calendar
+import tkinter as tk
+from tkinter import simpledialog
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
-import sys
-import os
-import tkinter as tk
-from tkinter import simpledialog
-import calendar
-# Cria a janela Tkinter e a oculta (não precisamos da janela principal)
+
+# Cria a janela Tkinter e a oculta
 root = tk.Tk()
 root.withdraw()
 
-# Solicita ao usuário a competência e o ano no formato MM/YYYY
+# Solicita ao usuário a competência (formato MM/YYYY)
 input_date = simpledialog.askstring("Competência de Faturamento", "Informe a competência e ano (MM/YYYY):")
-
-if input_date:
-    try:
-        # Separa o mês e o ano
-        month_str, year_str = input_date.split("/")
-        month = int(month_str)
-        year = int(year_str)
-        
-        # Define a data inicial como o primeiro dia do mês
-        first_date = f"01/{month:02d}/{year}"
-        
-        # Usa o módulo calendar para determinar o último dia do mês
-        last_day = calendar.monthrange(year, month)[1]
-        last_date = f"{last_day:02d}/{month:02d}/{year}"
-        
-        print("Data Inicial:", first_date)
-        print("Data Final:", last_date)
-        
-        # Aqui você pode armazenar first_date e last_date para uso posterior na automação dos datepickers
-        
-    except Exception as e:
-        print("Erro ao processar a data:", e)
-        exit(1)
-else:
+if not input_date:
     print("Nenhuma data informada. Encerrando...")
     exit(1)
 
+try:
+    month_str, year_str = input_date.split("/")
+    month = int(month_str)
+    year = int(year_str)
+    
+    # Define a data inicial como o primeiro dia do mês
+    first_date = f"01/{month:02d}/{year}"
+    
+    # Determina o último dia do mês
+    last_day = calendar.monthrange(year, month)[1]
+    last_date = f"{last_day:02d}/{month:02d}/{year}"
+    
+    print("Data Inicial:", first_date)
+    print("Data Final:", last_date)
+except Exception as e:
+    print("Erro ao processar a data:", e)
+    exit(1)
+
+# Solicita ao usuário o login e a senha
+login = simpledialog.askstring("Login", "Informe seu login:")
+password = simpledialog.askstring("Senha", "Informe sua senha:", show='*')
+if not login or not password:
+    print("Login ou senha não informados. Encerrando...")
+    exit(1)
+
+# Agora que os dados foram informados, inicia o Chrome
 
 if getattr(sys, 'frozen', False):
     base_path = sys._MEIPASS  # PyInstaller extrai arquivos temporários aqui
@@ -50,25 +55,37 @@ else:
     base_path = os.path.abspath(".")
 
 service = Service(os.path.join(base_path, "chromedriver-win64", "chromedriver.exe"))
-
-
 driver = webdriver.Chrome(service=service)
 
-# Acessar o sistema
+# Acessa a página de login
 driver.get('http://c3189prd.cloudmv.com.br/mvsso/login?service=http%3A%2F%2Fc3189prd.cloudmv.com.br%2Fsigss%2Fauthentication%2Fcallback%3Fclient_name%3DCasClient')
 
+# Preenche os campos de login e senha com os dados informados
+try:
+    username_input = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "username"))
+    )
+    username_input.clear()
+    username_input.send_keys(login)
+    print("Login preenchido com sucesso!")
+except Exception as e:
+    print("Erro ao preencher o campo de login:", e)
 
-# Localizar e preencher os campos de usuário e senha
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "username"))).send_keys("SANTANA")
-senha_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "password")))
-senha_input.send_keys("*261597Vg")
+try:
+    senha_input = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "password"))
+    )
+    senha_input.clear()
+    senha_input.send_keys(password)
+    print("Senha preenchida com sucesso!")
+except Exception as e:
+    print("Erro ao preencher o campo de senha:", e)
 
-# Pressionar TAB para mover para o botão e ENTER para efetuar o login
+# Efetua o login (pressiona TAB e ENTER)
 senha_input.send_keys(Keys.TAB)
 senha_input.send_keys(Keys.ENTER)
-
-# Esperar a página trocar para o ponto de acesso
 time.sleep(1)
+
 
 # Clicar em "ADMINISTRATIVO"
 WebDriverWait(driver, 10).until(
@@ -108,25 +125,36 @@ try:
 except Exception as e:
     print("Erro ao marcar checkbox:", e)
 
-# ✅ Clicar no primeiro datepicker e aguardar 3 segundos
+# ✅ Preencher o campo de data inicial via JavaScript
 try:
-    first_datepicker = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//img[@class='ui-datepicker-trigger']"))
+    dt_inicial = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "dtInicialRegi"))
     )
-    first_datepicker.click()
-    time.sleep(4)
+    # Remover o atributo readonly (caso exista)
+    driver.execute_script("arguments[0].removeAttribute('readonly')", dt_inicial)
+    # Definir o valor diretamente
+    driver.execute_script("arguments[0].value = arguments[1];", dt_inicial, first_date)
+    # Disparar o evento 'change' para garantir que a alteração seja capturada
+    driver.execute_script("arguments[0].dispatchEvent(new Event('change'));", dt_inicial)
+    print("Data inicial definida:", first_date)
 except Exception as e:
-    print("Erro ao clicar no primeiro datepicker:", e)
+    print("Erro ao definir data inicial:", e)
 
-# ✅ Clicar no segundo datepicker e aguardar 3 segundos
+# ✅ Preencher o campo de data final via JavaScript
 try:
-    second_datepicker = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "(//img[@class='ui-datepicker-trigger'])[2]"))
+    dt_final = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "dtFinalRegi"))
     )
-    second_datepicker.click()
-    time.sleep(4)
+    # Remover o atributo readonly (caso exista)
+    driver.execute_script("arguments[0].removeAttribute('readonly')", dt_final)
+    # Definir o valor diretamente
+    driver.execute_script("arguments[0].value = arguments[1];", dt_final, last_date)
+    # Disparar o evento 'change' para garantir que a alteração seja capturada
+    driver.execute_script("arguments[0].dispatchEvent(new Event('change'));", dt_final)
+    print("Data final definida:", last_date)
 except Exception as e:
-    print("Erro ao clicar no segundo datepicker:", e)
+    print("Erro ao definir data final:", e)
+
 
 # ✅ Abrir menu suspenso clicando no <a> com `class="chzn-single"`
 try:
